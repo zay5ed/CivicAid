@@ -4,7 +4,7 @@ import { GoogleGenerativeAI } from '@google/generative-ai';
 import cors from 'cors';
 import { Incident } from './types';
 const corsHandler = cors({ origin: true });
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "AIzaSyDcCKTw8IvUIqf8Vcyuti3-fECXA1ewhUg");
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || "");
 
 export const analyzeIncident = functions.https.onRequest((req, res) => {
   corsHandler(req, res, async () => {
